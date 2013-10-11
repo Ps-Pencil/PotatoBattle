@@ -39,26 +39,86 @@
 {
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super's" return value
-	if( (self=[super init]) ) {
+	if( (self=[super initWithColor:ccc4(236, 240, 241, 255)]) ) {
 		
         CGSize size = [[CCDirector sharedDirector] winSize];
         
         __block id copy_self = self;
         
-		[CCMenuItemFont setFontName:@"Marker Felt"];
-        [CCMenuItemFont setFontSize:19];
-        CCMenuItemFont* play = [CCMenuItemFont itemWithString:@"Play" block:^(id sender){
-            [[CCDirector sharedDirector] replaceScene:[PlayScene scene]];
-        }];
+        CCSprite* btnOrange = [CCSprite spriteWithFile:@"button.png"];
+        btnOrange.color = ccc3(241, 196, 15);
+       // btnOrange.scaleX = size.width * 0.5f / btnOrange.boundingBox.size.width;
+       // btnOrange.scaleY = size.height * 0.05 / btnOrange.boundingBox.size.height;
+        btnOrange.anchorPoint = ccp(0.5,0.5);
         
-        CCMenuItemFont* multiplayer = [CCMenuItemFont itemWithString:@"Multiplayer" target:self selector:@selector(multiplayerButtonTouched:)];
-        CCMenuItemFont* settings = [CCMenuItemFont itemWithString:@"Settings" target:self selector:@selector(settingsButtonTouched:)];
-        CCMenuItemFont* about = [CCMenuItemFont itemWithString:@"About" target:self selector:@selector(aboutButtonTouched:)];
-        CCMenu* menu = [CCMenu menuWithItems:play,multiplayer,settings,about, nil];
-        menu.position = ccp(size.width / 2.0f, size.height / 2.0f);
+        CCSprite* btnOrangeSelected = [CCSprite spriteWithFile:@"button.png"];
+       // btnOrangeSelected.scaleX = btnOrange.scaleX;
+        //btnOrangeSelected.scaleY = btnOrange.scaleY;
+        btnOrangeSelected.color = ccc3(243, 156, 18);
         
+        CCSprite* btnGreen = [CCSprite spriteWithFile:@"button.png"];
+        btnGreen.color = ccc3(46,204,113);
+       // btnGreen.scaleX = btnOrange.scaleX;
+       // btnGreen.scaleY =  btnOrange.scaleY;
+        
+        CCSprite* btnGreenSelected = [CCSprite spriteWithFile:@"button.png"];
+        btnGreenSelected.color = ccc3(39,174,96);
+        
+        CCSprite* btnBlue = [CCSprite spriteWithFile:@"button.png"];
+        btnBlue.color = ccc3(52,152,219);
+        CCSprite* btnBlueSelected = [CCSprite spriteWithFile:@"button.png"];
+        btnBlueSelected.color = ccc3(41,128,185);
+        
+        CCSprite* btnPurple = [CCSprite spriteWithFile:@"button.png"];
+        btnPurple.color = ccc3(155,89,182);
+        CCSprite* btnPurpleSelected = [CCSprite spriteWithFile:@"button.png"];
+        btnPurpleSelected.color = ccc3(142,68,173);
+       // btnBlue.scaleX = btnOrange.scaleX;
+       // btnBlue.scaleY =  btnOrange.scaleY;
+        
+        
+        CCMenuItemSprite* play = [CCMenuItemSprite itemWithNormalSprite:btnOrange selectedSprite:btnOrangeSelected target:self selector:@selector(playButtonTouched)         ];
+        play.anchorPoint = ccp(0.5,0.5);
+        play.position = ccp(size.width / 2.0, size.height / 2.0f);
+        play.scaleX =size.width * 0.5f / btnOrange.boundingBox.size.width;
+        play.scaleY =size.height * 0.05 / btnOrange.boundingBox.size.height;
+        CCLabelTTF* playText = [CCLabelTTF labelWithString:@"Play" fontName:@"Lato-Light" fontSize:19];
+        playText.position = play.position;
+        [self addChild:playText z:1];
+        
+        CCMenuItemSprite* multiplayer = [CCMenuItemSprite itemWithNormalSprite:btnGreen selectedSprite:btnGreenSelected target:self selector:@selector(multiplayerButtonTouched)];
+        multiplayer.anchorPoint = ccp(0.5,0.5);
+        multiplayer.position = ccp(size.width / 2.0, play.position.y - size.height / 8.0);
+        multiplayer.scaleX = play.scaleX;
+        multiplayer.scaleY =play.scaleY;
+        CCLabelTTF* multiplayerText = [CCLabelTTF labelWithString:@"Multiplayer" fontName:@"Lato-Light" fontSize:19];
+        multiplayerText.position = multiplayer.position;
+        [self addChild:multiplayerText z:1];
+        
+        
+        CCMenuItemSprite* settings = [CCMenuItemSprite itemWithNormalSprite:btnBlue selectedSprite:btnBlueSelected target:self selector:@selector(settingsButtonTouched)];
+        settings.anchorPoint = ccp(0.5,0.5);
+        settings.position = ccp(size.width / 2.0, multiplayer.position.y - size.height / 8.0);
+        settings.scaleX = play.scaleX;
+        settings.scaleY =play.scaleY;
+        CCLabelTTF* settingsText = [CCLabelTTF labelWithString:@"Settings" fontName:@"Lato-Light" fontSize:19];
+        settingsText.position = settings.position;
+        [self addChild:settingsText z:1];
+        
+        CCMenuItemSprite* about = [CCMenuItemSprite itemWithNormalSprite:btnPurple selectedSprite:btnPurpleSelected target:self selector:@selector(settingsButtonTouched)];
+        about.anchorPoint = ccp(0.5,0.5);
+        about.position = ccp(size.width / 2.0, settings.position.y - size.height / 8.0);
+        about.scaleX = play.scaleX;
+        about.scaleY =play.scaleY;
+        CCLabelTTF* aboutText = [CCLabelTTF labelWithString:@"About" fontName:@"Lato-Light" fontSize:19];
+        aboutText.position = about.position;
+        [self addChild:aboutText z:1];
+
+        CCMenu* menu = [CCMenu menuWithItems:play,multiplayer,settings, about,nil];
+        menu.anchorPoint = ccp(0,0);
+        menu.position = ccp(0,0);
         [self addChild:menu];
-        [menu alignItemsVerticallyWithPadding:40];
+        
 		
 		//
 		// Leaderboards and Achievements
@@ -111,7 +171,19 @@
 	return self;
 }
 
-
+-(void) playButtonTouched{
+    CCLOG(@"Clicked");
+    [[CCDirector sharedDirector] replaceScene:[PlayScene scene]];
+}
+-(void) multiplayerButtonTouched{
+    
+}
+-(void) settingsButtonTouched{
+    
+}
+-(void)aboutButtonTouched{
+    
+}
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc
 {

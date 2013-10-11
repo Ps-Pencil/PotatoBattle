@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "Result.h"
-@interface CombatScene : CCLayer {
+@interface CombatScene : CCLayerColor {
     bool fired1[10][10], fired2[10][10];
     int config1[10][10], config2[10][10];
     int numOfHits;
@@ -18,6 +18,8 @@
     NSMutableArray* rects;
     NSMutableArray* otherpos;
     NSMutableArray* otherhits;
+    CCMenuItemSprite* goBtn;
+    CCLabelTTF* proceedText;
     
 }
 + (CCScene *) sceneWithParameters: (NSMutableArray *)positions andHits:(NSMutableArray *)hits andOtherPositions: (NSMutableArray* )otherPositions andOtherHits: (NSMutableArray*) otherHits;

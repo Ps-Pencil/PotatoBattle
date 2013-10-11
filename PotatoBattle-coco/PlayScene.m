@@ -27,35 +27,126 @@
 }
 
 - (id) init{
-    if((self = [super init])){
+    if((self = [super initWithColor:ccc4(255, 255, 255, 255)])){
         CGSize size = [[CCDirector sharedDirector] winSize];
-        
-        CCMenuItemFont* backBtn = [CCMenuItemFont itemWithString:@"Back" block:^(id sender){
-            [[CCDirector sharedDirector] replaceScene:[HelloWorldLayer scene]];
-        }];
-        CCMenuItemFont* proceedBtn = [CCMenuItemFont itemWithString:@"Proceed" target:self selector:@selector(proceedBtnPressed)];
-        CCMenu* back = [CCMenu menuWithItems:proceedBtn,backBtn, nil];
-        back.position = ccp(size.width / 2.0f, 20);
-        [self addChild:back];
-        [back alignItemsVerticallyWithPadding:5];
-        
-        dragged = FALSE;
-        
+        scale = 0.5;
+        if (size.width > 300) {
+            scale = 1.0f;
+        }
+        float margin;
         CCSprite* map = [CCSprite spriteWithFile:@"map.png"];
         map.position = ccp(size.width / 2.0f , size.height / 2.0f);
+        CCLOG(@"%f %f",size.width,map.boundingBox.size.width);
+        map.scale = scale;
+        margin = size.width - map.boundingBox.size.width;
+        margin /= 2.0f;
         [self addChild:map z:0 tag:0];
+        [CCMenuItemFont setFontName:@"Lato-Light"];
+        [CCMenuItemFont setFontSize:19 ];
+        CCSprite* topBar = [CCSprite spriteWithFile:@"button.png"];
         
+       // CCSprite* separation = [CCSprite spriteWithFile:@"button.png"];
+        topBar.scaleX = size.width / topBar.boundingBox.size.width;
+        topBar.scaleY = ((map.position.y - map.boundingBox.size.height/2.0f - margin)) / topBar.boundingBox.size.height;
+        topBar.position = ccp(topBar.boundingBox.size.width / 2.0f, - map.boundingBox.size.height / 2.0f + map.position.y - margin - topBar.boundingBox.size.height/2.0f);
+        topBar.color = ccc3(255, 255,255);
+        [self addChild:topBar z:2];
+        
+        CCSprite* topBar2 = [CCSprite spriteWithFile:@"button.png"];
+        topBar2.scaleX = size.width / topBar2.boundingBox.size.width;
+        topBar2.scaleY =topBar2.scaleY = (size.height - (map.position.y + map.boundingBox.size.height/2.0f + margin) - 20) / topBar2.boundingBox.size.height;
+        topBar2.color = ccc3(255, 255,255);
+        topBar2.position = ccp(topBar2.boundingBox.size.width/2.0f, map.boundingBox.size.height / 2.0f + map.position.y + margin + topBar2.boundingBox.size.height / 2.0f + 10);
+        [self addChild:topBar2 z:2];
+        
+        //state = [CCSprite spriteWithFile:@"tick.png"];
+        
+        /*
+        separation.scaleX = 1.0 / separation.boundingBox.size.width;
+        separation.scaleY = topBar.boundingBox.size.height / separation.boundingBox.size.height;
+        separation.position = topBar.position;
+        separation.color = ccc3(185, 195, 199);
+
+        [self addChild:separation z:2];
+        
+        
+        CCSprite* statusBar = [CCSprite spriteWithFile:@"button.png"];
+        statusBar.scaleX = size.width / statusBar.boundingBox.size.width;
+        statusBar.scaleY = 20.0 / statusBar.boundingBox.size.height;
+        statusBar.position = ccp(size.width/2.0f, size.height - statusBar.boundingBox.size.height/2.0f);
+        statusBar.color = ccc3(149, 165, 166);
+        [self addChild:statusBar z:2];
+        
+        CCSprite* borderTop = [CCSprite spriteWithFile:@"button.png"];
+        borderTop.scaleX = (size.width -1.0) /borderTop.boundingBox.size.width;
+        borderTop.scaleY = 1.0 / borderTop.boundingBox.size.height;
+        borderTop.position = ccp(topBar.position.x, topBar.position.y + topBar.boundingBox.size.height / 2.0f);
+        borderTop.color = separation.color;
+        [self addChild:borderTop z:2];
+        
+        
+        CCSprite* borderBtm = [CCSprite spriteWithFile:@"button.png"];
+        borderBtm.scaleX = (size.width -1.0) /borderBtm.boundingBox.size.width;
+        borderBtm.scaleY = 1.0 / borderBtm.boundingBox.size.height;
+        borderBtm.position = ccp(topBar.position.x, topBar.position.y - topBar.boundingBox.size.height / 2.0f);
+        borderBtm.color = borderTop.color;
+        [self addChild:borderBtm z:2];
+        */
+
+        
+        
+        CCSprite* back = [CCSprite spriteWithFile:@"back.png"];
+        //back.color = ccc3(44, 62, 80);
+        CCSprite* backSelected = [CCSprite spriteWithFile:@"back.png"];
+        backSelected.color = ccc3(192,57 , 43);
+        
+        CCSprite* proceed = [CCSprite spriteWithFile:@"proceed.png"];
+       // proceed.color = ccc3(44, 62, 80);
+        CCSprite* proceedSelected = [CCSprite spriteWithFile:@"proceed.png"];
+        proceedSelected.color = ccc3(39,174,96);
+        
+        CCMenuItemSprite* backBtn = [CCMenuItemSprite itemWithNormalSprite:back selectedSprite:backSelected block:^(id sender){
+            [[CCDirector sharedDirector] replaceScene:[HelloWorldLayer scene]];
+        }];
+        backBtn.anchorPoint = ccp(0.5,0.5);
+        backBtn.scale = size.height * 0.08 / backBtn.boundingBox.size.height;
+        backBtn.position = ccp(size.width/4.0f, topBar.position.y + 20.0);
+        
+        CCLabelTTF* backText = [CCLabelTTF labelWithString:@"Back" fontName:@"Lato-Light" fontSize:19];
+        backText.position = ccp(backBtn.position.x,backBtn.position.y - backBtn.boundingBox.size.height / 2.0f - 20.0f);
+        backText.color = ccc3(145, 165, 166);
+        [self addChild:backText z:3];
+        
+        CCMenuItemSprite* proceedBtn = [CCMenuItemSprite itemWithNormalSprite:proceed selectedSprite:proceedSelected target:self selector:@selector(proceedBtnPressed)];
+        proceedBtn.anchorPoint = ccp(0.5,0.5);
+        proceedBtn.position = ccp(size.width/4.0f * 3.0f, topBar.position.y + 20.0);
+        proceedBtn.scale = backBtn.scale;
+        
+        CCLabelTTF* proceedText = [CCLabelTTF labelWithString:@"Proceed" fontName:@"Lato-Light" fontSize:19];
+        proceedText.position = ccp(proceedBtn.position.x,proceedBtn.position.y - proceedBtn.boundingBox.size.height / 2.0f - 20.0f);
+        proceedText.color = ccc3(145, 165, 166);
+        [self addChild:proceedText z:3];
+
+        CCMenu* menu = [CCMenu menuWithItems:backBtn,proceedBtn, nil];
+        menu.position = ccp(0,0);
+        menu.anchorPoint = ccp(0,0);
+        [self addChild:menu z:3];
+        dragged = FALSE;
+        
+        map.position = ccp(map.position.x, map.position.y + 20.0);
         for(int i = 1; i <= 5 ; i++)
         {
             CCSprite* potato = [CCSprite spriteWithFile:[NSString stringWithFormat:@"potato%d.png",i]];
             potato.position = ccp(map.position.x - [map boundingBox].size.width / 2.0f + (i-1) * [potato boundingBox].size.width +[potato boundingBox].size.width / 2.0f,map.position.y - [map boundingBox].size.height / 2.0f+[potato boundingBox].size.height/2);
             potato.tag = i;
             [self addChild:potato z:2];
+            potato.scale = scale;
             
             CCSprite* potato_shade = [CCSprite spriteWithFile:[NSString stringWithFormat:@"potato%d_shade.png",i]];
             potato_shade.position = ccp(map.position.x - [map boundingBox].size.width / 2.0f + (i-1) * [potato_shade boundingBox].size.width +[potato_shade boundingBox].size.width / 2.0f,map.position.y - [map boundingBox].size.height / 2.0f+[potato_shade boundingBox].size.height/2);
             potato_shade.tag = i+5;
             [self addChild:potato_shade z:1];
+            potato_shade.scale = scale;
         }
         
         

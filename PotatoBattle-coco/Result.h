@@ -10,7 +10,7 @@
 #import "cocos2d.h"
 #import "PlayScene.h"
 #import "HelloWorldLayer.h"
-@interface Result : CCLayer {
+@interface Result : CCLayerColor {
     
 }
 + (CCScene*) sceneWithWords: (NSString*) words;

@@ -150,8 +150,19 @@
 		FDA8AF4817E736C500518943 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA8AF4717E736C500518943 /* sun.png */; };
 		FDA8AF4A17E7395400518943 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = FDA8AF4917E7395400518943 /* moon.png */; };
 		FDA8AF4D17E73FBD00518943 /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA8AF4C17E73FBC00518943 /* Result.m */; };
+		FDAB13C8180689B800C46B12 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = FDAB13C7180689B800C46B12 /* button.png */; };
+		FDAB13CD1806A8DB00C46B12 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDAB13CC1806A80400C46B12 /* Lato-Light.ttf */; };
+		FDAB13CF1806CDC200C46B12 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = FDAB13CE1806CDC200C46B12 /* map.png */; };
+		FDAB13D11806DB8D00C46B12 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = FDAB13D01806DB8D00C46B12 /* back.png */; };
+		FDAB13D31806E64400C46B12 /* proceed.png in Resources */ = {isa = PBXBuildFile; fileRef = FDAB13D21806E64400C46B12 /* proceed.png */; };
+		FDAB13D61806F8A200C46B12 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = FDAB13D41806F8A200C46B12 /* back.png */; };
+		FDAB13D71806F8A200C46B12 /* proceed.png in Resources */ = {isa = PBXBuildFile; fileRef = FDAB13D51806F8A200C46B12 /* proceed.png */; };
+		FDAB13DA1806FD9500C46B12 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = FDAB13D81806FD9500C46B12 /* cross.png */; };
+		FDAB13DB1806FD9500C46B12 /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = FDAB13D91806FD9500C46B12 /* tick.png */; };
+		FDAB13DD18079ACA00C46B12 /* success2.png in Resources */ = {isa = PBXBuildFile; fileRef = FDAB13DC18079ACA00C46B12 /* success2.png */; };
+		FDAB13DF1807A3A200C46B12 /* go.png in Resources */ = {isa = PBXBuildFile; fileRef = FDAB13DE1807A3A200C46B12 /* go.png */; };
+		FDAB13E11807A5E700C46B12 /* restart.png in Resources */ = {isa = PBXBuildFile; fileRef = FDAB13E01807A5E700C46B12 /* restart.png */; };
 		FDF4081B17D9B12C00E1BCD2 /* PlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF4081A17D9B12C00E1BCD2 /* PlayScene.m */; };
-		FDF4081D17D9BA3B00E1BCD2 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = FDF4081C17D9BA3B00E1BCD2 /* map.png */; };
 		FDF4082817D9BD3D00E1BCD2 /* potato1_shade.png in Resources */ = {isa = PBXBuildFile; fileRef = FDF4081E17D9BD3A00E1BCD2 /* potato1_shade.png */; };
 		FDF4082917D9BD3D00E1BCD2 /* potato1.png in Resources */ = {isa = PBXBuildFile; fileRef = FDF4081F17D9BD3B00E1BCD2 /* potato1.png */; };
 		FDF4082A17D9BD3D00E1BCD2 /* potato2_shade.png in Resources */ = {isa = PBXBuildFile; fileRef = FDF4082017D9BD3B00E1BCD2 /* potato2_shade.png */; };
@@ -458,9 +469,20 @@
 		FDA8AF4917E7395400518943 /* moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moon.png; path = Resources/moon.png; sourceTree = "<group>"; };
 		FDA8AF4B17E73FBB00518943 /* Result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
 		FDA8AF4C17E73FBC00518943 /* Result.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Result.m; sourceTree = "<group>"; };
+		FDAB13C7180689B800C46B12 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = Resources/button.png; sourceTree = "<group>"; };
+		FDAB13CC1806A80400C46B12 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "Resources/Lato-Light.ttf"; sourceTree = "<group>"; };
+		FDAB13CE1806CDC200C46B12 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map.png; path = Resources/map.png; sourceTree = "<group>"; };
+		FDAB13D01806DB8D00C46B12 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = Resources/back.png; sourceTree = "<group>"; };
+		FDAB13D21806E64400C46B12 /* proceed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = proceed.png; path = Resources/proceed.png; sourceTree = "<group>"; };
+		FDAB13D41806F8A200C46B12 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = Resources/back.png; sourceTree = "<group>"; };
+		FDAB13D51806F8A200C46B12 /* proceed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = proceed.png; path = Resources/proceed.png; sourceTree = "<group>"; };
+		FDAB13D81806FD9500C46B12 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cross.png; path = Resources/cross.png; sourceTree = "<group>"; };
+		FDAB13D91806FD9500C46B12 /* tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tick.png; path = Resources/tick.png; sourceTree = "<group>"; };
+		FDAB13DC18079ACA00C46B12 /* success2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = success2.png; path = Resources/success2.png; sourceTree = "<group>"; };
+		FDAB13DE1807A3A200C46B12 /* go.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = go.png; path = Resources/go.png; sourceTree = "<group>"; };
+		FDAB13E01807A5E700C46B12 /* restart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = restart.png; path = Resources/restart.png; sourceTree = "<group>"; };
 		FDF4081917D9B12C00E1BCD2 /* PlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayScene.h; sourceTree = "<group>"; };
 		FDF4081A17D9B12C00E1BCD2 /* PlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayScene.m; sourceTree = "<group>"; };
-		FDF4081C17D9BA3B00E1BCD2 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map.png; path = ../../PotatoBattle/media/graphics/1x/map.png; sourceTree = "<group>"; };
 		FDF4081E17D9BD3A00E1BCD2 /* potato1_shade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = potato1_shade.png; path = Resources/potato1_shade.png; sourceTree = "<group>"; };
 		FDF4081F17D9BD3B00E1BCD2 /* potato1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = potato1.png; path = Resources/potato1.png; sourceTree = "<group>"; };
 		FDF4082017D9BD3B00E1BCD2 /* potato2_shade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = potato2_shade.png; path = Resources/potato2_shade.png; sourceTree = "<group>"; };
@@ -558,11 +580,21 @@
 				FD9E5F1317D78731004800A6 /* Default.png */,
 				FD9E5F1517D78731004800A6 /* Default@2x.png */,
 				FDF4081E17D9BD3A00E1BCD2 /* potato1_shade.png */,
+				FDAB13DE1807A3A200C46B12 /* go.png */,
+				FDAB13CC1806A80400C46B12 /* Lato-Light.ttf */,
+				FDAB13D01806DB8D00C46B12 /* back.png */,
 				FDF4081F17D9BD3B00E1BCD2 /* potato1.png */,
+				FDAB13C7180689B800C46B12 /* button.png */,
 				FDF4082017D9BD3B00E1BCD2 /* potato2_shade.png */,
 				FDA8AF4917E7395400518943 /* moon.png */,
 				FDF4082117D9BD3B00E1BCD2 /* potato2.png */,
+				FDAB13D81806FD9500C46B12 /* cross.png */,
+				FDAB13D91806FD9500C46B12 /* tick.png */,
 				FDA8AF3B17E477CD00518943 /* fired.png */,
+				FDAB13DC18079ACA00C46B12 /* success2.png */,
+				FDAB13D21806E64400C46B12 /* proceed.png */,
+				FDAB13D41806F8A200C46B12 /* back.png */,
+				FDAB13D51806F8A200C46B12 /* proceed.png */,
 				FDA8AF4717E736C500518943 /* sun.png */,
 				FDA8AF3C17E477CD00518943 /* touch.png */,
 				FDA03B1A17DB59D500DAB95D /* cellCover.png */,
@@ -574,13 +606,14 @@
 				FDF4082617D9BD3D00E1BCD2 /* potato5_shade.png */,
 				FDF4082717D9BD3D00E1BCD2 /* potato5.png */,
 				FD9E5F1717D78731004800A6 /* Default-568h@2x.png */,
+				FDAB13CE1806CDC200C46B12 /* map.png */,
 				FD9E5F1917D78731004800A6 /* Default-Landscape~ipad.png */,
 				FD9E5F1B17D78731004800A6 /* Icon-72.png */,
 				FD9E5F1D17D78731004800A6 /* Icon-Small-50.png */,
 				FD9E5F1F17D78731004800A6 /* Icon-Small.png */,
+				FDAB13E01807A5E700C46B12 /* restart.png */,
 				FD9E5F2117D78731004800A6 /* Icon-Small@2x.png */,
 				FD9E5F2317D78731004800A6 /* Icon.png */,
-				FDF4081C17D9BA3B00E1BCD2 /* map.png */,
 				FD9E5F2517D78731004800A6 /* Icon@2x.png */,
 				FD9E5F2717D78731004800A6 /* Info.plist */,
 				FD9E5F2817D78731004800A6 /* iTunesArtwork */,
@@ -1002,18 +1035,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD9E5F1417D78731004800A6 /* Default.png in Resources */,
+				FDAB13C8180689B800C46B12 /* button.png in Resources */,
+				FDAB13D61806F8A200C46B12 /* back.png in Resources */,
 				FD9E5F1617D78731004800A6 /* Default@2x.png in Resources */,
 				FD9E5F1817D78731004800A6 /* Default-568h@2x.png in Resources */,
 				FD9E5F1A17D78731004800A6 /* Default-Landscape~ipad.png in Resources */,
+				FDAB13D31806E64400C46B12 /* proceed.png in Resources */,
 				FD9E5F1C17D78731004800A6 /* Icon-72.png in Resources */,
 				FD9E5F1E17D78731004800A6 /* Icon-Small-50.png in Resources */,
 				FD9E5F2017D78731004800A6 /* Icon-Small.png in Resources */,
 				FD9E5F2217D78731004800A6 /* Icon-Small@2x.png in Resources */,
+				FDAB13CD1806A8DB00C46B12 /* Lato-Light.ttf in Resources */,
+				FDAB13CF1806CDC200C46B12 /* map.png in Resources */,
 				FD9E5F2417D78731004800A6 /* Icon.png in Resources */,
+				FDAB13D11806DB8D00C46B12 /* back.png in Resources */,
 				FD9E5F2617D78731004800A6 /* Icon@2x.png in Resources */,
 				FD9E5F2917D78731004800A6 /* iTunesArtwork in Resources */,
 				FD9E608217D78734004800A6 /* ChangeLog in Resources */,
-				FDF4081D17D9BA3B00E1BCD2 /* map.png in Resources */,
+				FDAB13DA1806FD9500C46B12 /* cross.png in Resources */,
+				FDAB13E11807A5E700C46B12 /* restart.png in Resources */,
 				FDF4082817D9BD3D00E1BCD2 /* potato1_shade.png in Resources */,
 				FDF4082917D9BD3D00E1BCD2 /* potato1.png in Resources */,
 				FDF4082A17D9BD3D00E1BCD2 /* potato2_shade.png in Resources */,
@@ -1021,10 +1061,14 @@
 				FDF4082C17D9BD3D00E1BCD2 /* potato3_shade.png in Resources */,
 				FDF4082D17D9BD3D00E1BCD2 /* potato3.png in Resources */,
 				FDF4082E17D9BD3D00E1BCD2 /* potato4_shade.png in Resources */,
+				FDAB13DF1807A3A200C46B12 /* go.png in Resources */,
+				FDAB13D71806F8A200C46B12 /* proceed.png in Resources */,
+				FDAB13DB1806FD9500C46B12 /* tick.png in Resources */,
 				FDF4082F17D9BD3D00E1BCD2 /* potato4.png in Resources */,
 				FDF4083017D9BD3D00E1BCD2 /* potato5_shade.png in Resources */,
 				FDF4083117D9BD3D00E1BCD2 /* potato5.png in Resources */,
 				FDA03B1B17DB59D500DAB95D /* cellCover.png in Resources */,
+				FDAB13DD18079ACA00C46B12 /* success2.png in Resources */,
 				FDA8AF3D17E477CD00518943 /* fired.png in Resources */,
 				FDA8AF3E17E477CD00518943 /* touch.png in Resources */,
 				FDA8AF4317E6E85200518943 /* success.png in Resources */,
@@ -1166,6 +1210,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1177,7 +1222,9 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1187,6 +1234,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1196,7 +1244,9 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1212,7 +1262,7 @@
 				GCC_PREFIX_HEADER = "PotatoBattle-coco/Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"PotatoBattle-coco/libs/kazmath/include\"";
 				INFOPLIST_FILE = "PotatoBattle-coco/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
@@ -1232,7 +1282,7 @@
 				GCC_PREFIX_HEADER = "PotatoBattle-coco/Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"PotatoBattle-coco/libs/kazmath/include\"";
 				INFOPLIST_FILE = "PotatoBattle-coco/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",

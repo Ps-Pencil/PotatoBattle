@@ -9,9 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface PlayScene : CCLayer {
+@interface PlayScene : CCLayerColor {
     bool dragged;
     CCSprite* selSprite;
+    float scale;
+    CCSprite* state;
+    CCLabelTTF* words;
 }
 +(CCScene *) scene;
 @end

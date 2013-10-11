@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>434B6B43-F463-43DB-AA19-3774E16092C2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PotatoBattle-coco</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>92C0D2B7-869B-4FF7-8E46-8D7C5C00CD3F</key>
+		<string>https://github.com/Ps-Pencil/PotatoBattle.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PotatoBattle-coco.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>92C0D2B7-869B-4FF7-8E46-8D7C5C00CD3F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Ps-Pencil/PotatoBattle.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>92C0D2B7-869B-4FF7-8E46-8D7C5C00CD3F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>92C0D2B7-869B-4FF7-8E46-8D7C5C00CD3F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PotatoBattle-coco</string>
+		</dict>
+	</array>
+</dict>
+</plist>
